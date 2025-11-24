@@ -1,9 +1,8 @@
 {
-  "name": "ToastWorld",
+  "name": "toast_world",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://choshinyoung.github.io/ToastWorld",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -156,19 +156,9 @@ withUpdate {
   {
     id: "g_player",
     name: "player",
-    code: `player is fallable { color = "#ffffff" }
+    code: `player is { color = "#ffffff" }
 withUpdate {
-    // 사용자 입력으로 이동 (좌우 점프)
-    var dx = inputX();
-    var dy = inputY();
-    
-    if (dx !== 0) move(dx, 0);
-    // 점프 (위로 이동) - 중력보다 우선순위가 높아야 하므로 보통 move(0, -1)이 먼저 호출되거나
-    // fallable의 중력 로직보다 이 코드가 나중에 실행되어(상속 순서상) 덮어쓰지 않음.
-    // 파서는 부모 이벤트를 먼저 붙이므로, fallable의 중력이 먼저 실행됨.
-    // 이미 떨어졌으면 점프 불가? -> 땅에 닿아있을 때만 점프 가능하게 하려면 로직이 복잡함.
-    // 일단 간단한 비행/점프 허용
-    if (dy < 0) move(0, dy); 
+    move(inputX(), inputY());
 }`,
   },
   // [Life]

@@ -1,19 +1,11 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import {
   Play,
   Pause,
   RefreshCw,
   AlertCircle,
   Check,
-  Info,
   MousePointer2,
-  Move,
   Plus,
   Trash2,
   Settings,
@@ -759,7 +751,7 @@ export default function CellularAutomataGame() {
     const uid = grid[y][x].uniqueId || `u_${x}_${y}_${Date.now()}`;
 
     const full = `Custom_${uid} is ${editCode}`;
-    const { definitions, error } = parseDSL(full, sharedDefs);
+    const { error } = parseDSL(full, sharedDefs);
     if (error) {
       setEditError(error);
       return;

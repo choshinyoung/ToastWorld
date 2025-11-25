@@ -1,6 +1,3 @@
-https://toast-world-wxuc.vercel.app/
----
-
 제공해주신 코드와 **'게임을 위한 게임(Game for Game's sake)'**, 즉 결과나 목적보다 과정과 존재 그 자체를 중시하는 미학적 관점을 반영하여 작성한 `README.md`입니다.
 
 ---
